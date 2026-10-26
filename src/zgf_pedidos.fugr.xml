@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Grupo de funções de pedidos</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>SAPLZGF_PEDIDOS</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZF_ATUALIZA_ESTOQUE_</FUNCNAME>
+     <SHORT_TEXT>Função que atualiza o estoque</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_ID_PROD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_PROD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_QTDE_VENDIDA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZQTDE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_SUCESSO</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CHAR1</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>ESTOQUE_INSUFICIENTE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>PRODUTO_NAO_ENCONTRADO</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_ID_PROD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Chave para ZTB_PROD</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_QTDE_VENDIDA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Quantidade a ser subtraída do estoque.</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_SUCESSO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Código de um caractere</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ESTOQUE_INSUFICIENTE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Estoque insuficiente</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PRODUTO_NAO_ENCONTRADO</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Produto não encontrado</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZF_CALCULA_TOTAL_</FUNCNAME>
+     <SHORT_TEXT>Calcula o valor total do pedido</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_PRECO</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZPRECO</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_QTDE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZQTDE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_VALOR_ITEM</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZVALOR_ITEM</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>QTDE_NEGATIVA</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_PRECO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Preço do produto</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_QTDE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Quantidade pedida</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_VALOR_ITEM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Valor total do item</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>QTDE_NEGATIVA</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Quantidade negativa</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZF_GET_RELATORIO_</FUNCNAME>
+     <SHORT_TEXT>Prepara relatórios</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_ID_PED_LOW</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTB_PED2-ID_PED</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_PED_HIGH</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTB_PED2-ID_PED</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DATA_LOW</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTB_PED2-DATA_PED</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DATA_HIGH</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTB_PED2-DATA_PED</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_FUNC_LOW</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_FUNC</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_FUNC_HIGH</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_FUNC</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_PROD_LOW</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_PROD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_PROD_HIGH</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_PROD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_STATUS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZSTATUS_PED</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>CT_RELATORIO</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTYP_RELATORIO_PED</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_ID_PED_LOW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Pedido Inicial (Range LOW)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_PED_HIGH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Número do pedido</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DATA_LOW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Data do Pedido LOW</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DATA_HIGH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Data do Pedido HIGH</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_FUNC_LOW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Código do funcionário</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_FUNC_HIGH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Código do funcionário</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_PROD_LOW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Código do produto</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_PROD_HIGH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Código do produto</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Status do pedido</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CT_RELATORIO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela interna com dados consolidados</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

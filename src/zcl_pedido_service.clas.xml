@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_PEDIDO_SERVICE</CLSNAME>
+    <LANGU>P</LANGU>
+    <DESCRIPT>Serviço de pedidos – regras de negócio</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <MSG_ID>ZMSG_COFFEE</MSG_ID>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ADICIONAR_ITEM</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Adicionar Item</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CALCULAR_TOTAIS</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Calcular totais</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CARREGAR_PEDIDO</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Carregar Pedido</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GS_PEDIDO</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Estrutura do cabeçalho de pedidos</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GT_ITENS</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Estrura dos itens</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>REMOVER_ITEM</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Remover Item</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SALVAR_PEDIDO</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Salvar Pedido</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALIDAR_CABECALHO</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Validar Cabeçalho</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALIDAR_ITEM</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Validar Item</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ADICIONAR_ITEM</CMPNAME>
+     <SCONAME>IS_ITEM</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Estrura dos itens</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CARREGAR_PEDIDO</CMPNAME>
+     <SCONAME>IV_PEDIDO</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Número do pedido</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_ID_PED</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Número do pedido</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REMOVER_ITEM</CMPNAME>
+     <SCONAME>IV_PROD_ID</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Código do item do pedido</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SALVAR_PEDIDO</CMPNAME>
+     <SCONAME>RV_PEDIDO</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Número do pedido</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDAR_CABECALHO</CMPNAME>
+     <SCONAME>IV_CAB</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Estrutura do cabeçalho de pedidos</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDAR_ITEM</CMPNAME>
+     <SCONAME>IS_ITEM</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Estrutura do cabeçalho de pedidos</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

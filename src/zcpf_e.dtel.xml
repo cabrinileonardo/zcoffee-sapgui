@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZCPF_E</ROLLNAME>
+    <DDLANGUAGE>P</DDLANGUAGE>
+    <DOMNAME>ZCPF_D</DOMNAME>
+    <HEADLEN>14</HEADLEN>
+    <SCRLEN1>03</SCRLEN1>
+    <SCRLEN2>14</SCRLEN2>
+    <SCRLEN3>14</SCRLEN3>
+    <DDTEXT>Cpf do cliente</DDTEXT>
+    <REPTEXT>Cpf do cliente</REPTEXT>
+    <SCRTEXT_S>CPF</SCRTEXT_S>
+    <SCRTEXT_M>Cpf do cliente</SCRTEXT_M>
+    <SCRTEXT_L>Cpf do cliente</SCRTEXT_L>
+    <DTELMASTER>P</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

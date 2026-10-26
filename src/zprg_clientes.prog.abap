@@ -1,0 +1,21 @@
+REPORT ZPRG_CLIENTES.
+
+INCLUDE ZPRG_CLIENTES_TOP.
+INCLUDE ZPRG_CLIENTES_FRM.
+INCLUDE ZPRG_CLIENTES_PAI.
+INCLUDE ZPRG_CLIENTES_PBO.
+
+START-OF-SELECTION.
+
+  CASE 'X'.
+    WHEN rb_ins.
+      PERFORM f_inserir_cliente.
+    WHEN rb_alt.
+      PERFORM f_alterar_cliente.
+    WHEN rb_exi.
+      PERFORM f_exibir_cliente.
+  ENDCASE.
+
+END-OF-SELECTION.
+
+  PERFORM f_limpa_tudo.

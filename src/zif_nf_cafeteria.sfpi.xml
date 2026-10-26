@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SFPI" serializer_version="v1.0.0">
+ <asx:abap version="1.0" xmlns:asx="http://www.sap.com/abapxml">
+  <asx:values>
+   <VERSION>1</VERSION>
+   <TYPE/>
+   <INTERFACE href="#o1"/>
+   <INTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>P</LANGUAGE>
+     <ID/>
+     <TEXT>Interface Nota Fiscal – Cafeteria</TEXT>
+    </FPINTERFACET>
+   </INTERFACET>
+  </asx:values>
+  <asx:heap xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abap="http://www.sap.com/abapxml/types/built-in" xmlns:cls="http://www.sap.com/abapxml/classes/global" xmlns:dic="http://www.sap.com/abapxml/types/dictionary">
+   <cls:CL_FP_INTERFACE_DATA id="o1">
+    <CL_FP_INTERFACE_DATA classVersion="1">
+     <CODING href="#o5"/>
+     <PARAMETERS href="#o4"/>
+     <GLOBAL_DEFINITIONS href="#o3"/>
+     <REFERENCE_FIELDS href="#o2"/>
+     <XSD_DEFINITIONS/>
+    </CL_FP_INTERFACE_DATA>
+   </cls:CL_FP_INTERFACE_DATA>
+   <cls:CL_FP_REFERENCE_FIELDS id="o2">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_REFERENCE_FIELDS classVersion="1">
+     <REFERENCE_FIELDS/>
+    </CL_FP_REFERENCE_FIELDS>
+   </cls:CL_FP_REFERENCE_FIELDS>
+   <cls:CL_FP_GLOBAL_DEFINITIONS id="o3">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_GLOBAL_DEFINITIONS classVersion="1">
+     <GLOBAL_DATA>
+      <SFPGDATA>
+       <NAME>LWA_PED</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZSTRPED_01</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>LT_PED</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZTSTRPED_01</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>LWA_PEDIT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZSTRPEDIT_01</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>LT_PEDIT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZTSTRPEDIT_01</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+     </GLOBAL_DATA>
+     <TYPES/>
+     <FIELDSYMBOLS/>
+    </CL_FP_GLOBAL_DEFINITIONS>
+   </cls:CL_FP_GLOBAL_DEFINITIONS>
+   <cls:CL_FP_PARAMETERS id="o4">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_PARAMETERS classVersion="1">
+     <IMPORT_PARAMETERS>
+      <SFPIOPAR>
+       <NAME>P_IDPED</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZID_PED</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+     </IMPORT_PARAMETERS>
+     <EXPORT_PARAMETERS/>
+     <TABLE_PARAMETERS/>
+     <EXCEPTIONS/>
+    </CL_FP_PARAMETERS>
+   </cls:CL_FP_PARAMETERS>
+   <cls:CL_FP_CODING id="o5">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_CODING classVersion="1">
+     <INPUT_PARAMETERS>
+      <FPPARAMETER>P_IDPED</FPPARAMETER>
+     </INPUT_PARAMETERS>
+     <OUTPUT_PARAMETERS>
+      <FPPARAMETER>LT_PED</FPPARAMETER>
+      <FPPARAMETER>LT_PEDIT</FPPARAMETER>
+     </OUTPUT_PARAMETERS>
+     <INITIALIZATION>
+      <FPCLINE>SELECT  a~id_ped,</FPCLINE>
+      <FPCLINE>        a~id_cliente,</FPCLINE>
+      <FPCLINE>        b~cpf AS cpf_cliente,</FPCLINE>
+      <FPCLINE>        b~nome_cli AS nome_cliente,</FPCLINE>
+      <FPCLINE>        a~data_ped,</FPCLINE>
+      <FPCLINE>        a~hora_ped,</FPCLINE>
+      <FPCLINE>        a~valor_total,</FPCLINE>
+      <FPCLINE>        a~id_func,</FPCLINE>
+      <FPCLINE>        c~nome AS nome_func,</FPCLINE>
+      <FPCLINE>        a~moeda,</FPCLINE>
+      <FPCLINE>        a~status_ped,</FPCLINE>
+      <FPCLINE>        d~ddtext AS status_desc,</FPCLINE>
+      <FPCLINE>        f~descricao  AS pm_desc</FPCLINE>
+      <FPCLINE>FROM ztb_ped AS a</FPCLINE>
+      <FPCLINE>INNER JOIN ztb_clientes AS b</FPCLINE>
+      <FPCLINE> ON a~id_cliente = b~id_cliente</FPCLINE>
+      <FPCLINE>INNER JOIN ztb_func AS c</FPCLINE>
+      <FPCLINE> ON a~id_func = c~id_func</FPCLINE>
+      <FPCLINE>INNER JOIN dd07t AS d</FPCLINE>
+      <FPCLINE> ON d~domname = &apos;ZSTATUS_PED_D&apos;</FPCLINE>
+      <FPCLINE> AND d~domvalue_l = a~status_ped</FPCLINE>
+      <FPCLINE> AND d~ddlanguage = @sy-langu</FPCLINE>
+      <FPCLINE> LEFT JOIN ztb_pagamento AS f</FPCLINE>
+      <FPCLINE>    ON a~pm = f~id</FPCLINE>
+      <FPCLINE>INTO CORRESPONDING FIELDS OF TABLE @lt_ped</FPCLINE>
+      <FPCLINE>WHERE a~id_ped = @p_idped.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>IF lt_ped IS NOT INITIAL.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  SELECT a~id_ped,</FPCLINE>
+      <FPCLINE>         a~id_prod,</FPCLINE>
+      <FPCLINE>         c~nome_prod,</FPCLINE>
+      <FPCLINE>         c~preco AS preco_prod,</FPCLINE>
+      <FPCLINE>         a~qtde,</FPCLINE>
+      <FPCLINE>         a~valor_item</FPCLINE>
+      <FPCLINE>    FROM ztb_pedit AS a</FPCLINE>
+      <FPCLINE>    INNER JOIN ztb_ped AS b</FPCLINE>
+      <FPCLINE>     ON a~id_ped = b~id_ped</FPCLINE>
+      <FPCLINE>    INNER JOIN ztb_prod AS c</FPCLINE>
+      <FPCLINE>     ON a~id_prod = c~id_prod</FPCLINE>
+      <FPCLINE>    WHERE b~id_ped = @p_idped</FPCLINE>
+      <FPCLINE>    INTO CORRESPONDING FIELDS OF TABLE @lt_pedit.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>ENDIF.</FPCLINE>
+     </INITIALIZATION>
+     <FORMS/>
+    </CL_FP_CODING>
+   </cls:CL_FP_CODING>
+  </asx:heap>
+ </asx:abap>
+</abapGit>

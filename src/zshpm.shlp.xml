@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SHLP" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD30V>
+    <SHLPNAME>ZSHPM</SHLPNAME>
+    <DDLANGUAGE>P</DDLANGUAGE>
+    <DDTEXT>Ajuda de pesquisa para método de pagamento</DDTEXT>
+    <ISSIMPLE>X</ISSIMPLE>
+    <SELMETHOD>ZTB_PAGAMENTO</SELMETHOD>
+    <SELMTYPE>T</SELMTYPE>
+    <DIALOGTYPE>D</DIALOGTYPE>
+    <FUZZY_SIMILARITY>0.8</FUZZY_SIMILARITY>
+   </DD30V>
+   <DD32P_TABLE>
+    <DD32P>
+     <SHLPNAME>ZSHPM</SHLPNAME>
+     <FIELDNAME>ID</FIELDNAME>
+     <FLPOSITION>0001</FLPOSITION>
+     <ROLLNAME>ZDEIDPAG</ROLLNAME>
+     <SHLPINPUT>X</SHLPINPUT>
+     <SHLPOUTPUT>X</SHLPOUTPUT>
+     <SHLPLISPOS>01</SHLPLISPOS>
+     <SCRLEN3>40</SCRLEN3>
+    </DD32P>
+    <DD32P>
+     <SHLPNAME>ZSHPM</SHLPNAME>
+     <FIELDNAME>DESCRICAO</FIELDNAME>
+     <FLPOSITION>0002</FLPOSITION>
+     <ROLLNAME>ZDEDESCPAG</ROLLNAME>
+     <SHLPINPUT>X</SHLPINPUT>
+     <SHLPLISPOS>02</SHLPLISPOS>
+     <SCRLEN3>40</SCRLEN3>
+    </DD32P>
+   </DD32P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Grupo de Funções Central do Sistema</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGPF_PEDIDOSTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGPF_PEDIDOS</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZF_ATUALIZA_ESTOQUE</FUNCNAME>
+     <SHORT_TEXT>Atualiza estoque após pedido</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_ID_PED</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTB_PED-ID_PED</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_MSG</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CHAR100</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>ESTOQUE_INSUFICIENTE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>PRODUTO_NAO_ENCONTRADO</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_ID_PED</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Número do pedido</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_MSG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Caractere 100</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ESTOQUE_INSUFICIENTE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Estoque induficiente</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PRODUTO_NAO_ENCONTRADO</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>produto não encontrado</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZF_CALCULA_TOTAL</FUNCNAME>
+     <SHORT_TEXT>Calcula valor total de pedido</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_ID_PEDIDO</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>NUMC10</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_RESULTADO</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>DECFLOAT34</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>SEM_ITENS</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_ID_PEDIDO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Campo de texto numérico de comprimento 10</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_RESULTADO</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SEM_ITENS</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>SEM ITENS</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZF_GET_NEXT_ID_PARAM</FUNCNAME>
+     <SHORT_TEXT>Retorna id automático</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_OBJETO</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CHAR20</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_NEXT_ID</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>NUMC10</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NOT_FOUND_OTHERS</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_OBJETO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Char 20</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_NEXT_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Campo de texto numérico de comprimento 10</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOT_FOUND_OTHERS</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Não foi encontrado</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZF_GET_RELATORIO</FUNCNAME>
+     <SHORT_TEXT>Relatorio de dados para alv</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_ID_PED_LOW</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_PED</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_PED_H</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_PED</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_CLIENTE_L</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_CLIENTE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_CLIENTE_H</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_CLIENTE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DATA_PED_L</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZDATA_PED</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DATA_PED_H</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZDATA_PED</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_STATUS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZSTATUS_PED</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_FUNC_L</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_FUNC</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_FUNC_H</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_FUNC</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_PROD_L</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_PROD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ID_PROD_H</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZID_PROD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_TIPO</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CHAR1</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_CAT_PROD</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZCATEGORIA</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_QTDE_ESTOQUE_MIN</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZQTDE_ESTOQUE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_QTDE_ESTOQUE_MAX</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZQTDE_ESTOQUE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_STATUS_PROD</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZSTATUS_PROD_E</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_RESULT_PED</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTYP_REL_PED</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_RESULT_EST</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTYP_RELATORIO_ESTOQUE</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>SEM_DADOS</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>TIPO_INEXISTENTE</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_ID_PED_LOW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Número do pedido Low</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_PED_H</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Número do pedido High</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_CLIENTE_L</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Cod. Cliente Low</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_CLIENTE_H</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Cod. Cliente High</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DATA_PED_L</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Data do Pedido Low</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DATA_PED_H</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Data do Pedido High</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Status do pedido</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_FUNC_L</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Código do funcionário low</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_FUNC_H</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Código do funcionário high</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_PROD_L</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Código do produto low</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ID_PROD_H</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Código do produto high</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_TIPO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Código de um caractere</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_CAT_PROD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ex: Café, Doce, Salgado</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_QTDE_ESTOQUE_MIN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Quantidade disponível</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_QTDE_ESTOQUE_MAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Quantidade disponível</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_STATUS_PROD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Status do produto</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_RESULT_PED</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tipo de tabela para fazer relatorio de pedidos</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_RESULT_EST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Estoque</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SEM_DADOS</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Dados não encontrados</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TIPO_INEXISTENTE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Tipo de relatorio não existe</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

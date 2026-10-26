@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMSG_COFFEE</ARBGB>
+    <MASTERLANG>P</MASTERLANG>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Funcionário Cadastrado com Sucesso!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Erro ao cadastrar funcionário (ID já exite).</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Nenhum funcionário encontrado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Funcionario alterado com sucesso.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Funcionário não encontrado para alteração.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Funcionário excluido com sucesso!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Funcionário não encontrado para exclusão!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Produto Cadastrado com sucesso.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>ID de produto ja cadastrado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Nenhum produto encontrado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Produto alterado com sucesso!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Produto não encontrado para alteração.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Produto excluido com sucesso!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Produto não encontrado para exclusão.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Estoque baixo - Reabastecimento necessário!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Pedido registrado com sucesso!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Erro ao registrar pedido!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Produto informado não encontrado no estoque!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Quantidade solicitada maior que o disponível!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>Estoque atualizado com sucesso!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>Erro ao atualizar estoque!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>026</MSGNR>
+     <TEXT>Valor total do pedido calculado com sucesso!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>030</MSGNR>
+     <TEXT>Nenhum dado encontrado para relatório.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>Relatório gerado com sucesso.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>Tipo de relatório inexistente.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>033</MSGNR>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>040</MSGNR>
+     <TEXT>Erro ao exibir popup de confirmação.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>041</MSGNR>
+     <TEXT>Erro ao chamar transação</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZMSG_COFFEE</ARBGB>
+     <MSGNR>042</MSGNR>
+     <TEXT>Ação cancelada pelo usuário</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>
